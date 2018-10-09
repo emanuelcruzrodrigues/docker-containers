@@ -1,0 +1,7 @@
+docker run --rm --name container_name \
+-v $(pwd)/deployments:/opt/jboss/wildfly/standalone/deployments \
+-e DB_CONNECTION_URL=jdbc:jtds:sqlserver://ip:port/database \
+-e DB_USERNAME=username \
+-e DB_PASSWORD=password \
+emanuel/wildfly-sqlserver
+
