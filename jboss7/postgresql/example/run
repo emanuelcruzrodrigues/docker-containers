@@ -1,0 +1,12 @@
+docker run -it --rm --name=container_name \
+-p 8080:8080 \
+-p 8787:8787 \
+-v $(pwd)/deployments:/opt/jboss/jboss-as-7.1.1.Final/standalone/deployments \
+-e DS_NAME=BullcontrolDS \
+-e DB_CONNECTION_URL=jdbc:postgresql://postgresql:5432/bullcontrol \
+-e DB_USERNAME=postgres \
+-e DB_PASSWORD=postgres \
+-e DB_DRIVER=postgresql-9.4-1204.jdbc4.jar \
+-e TZ=America/Sao_Paulo \
+--network dev_network \
+emanuel/jboss7-postgresql
