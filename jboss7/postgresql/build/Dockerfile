@@ -9,8 +9,8 @@ apt-get update \
 && apt-get install -y wget \
 && wget http://download.jboss.org/jbossas/7.1/jboss-as-7.1.1.Final/jboss-as-7.1.1.Final.tar.gz -P /tmp \
 && mkdir /opt/jboss \
-&& tar -xf /tmp/jboss.tar.gz --directory=/opt/jboss/ \
-&& rm -f /tmp/jboss.tar.gz
+&& tar -xf /tmp/jboss-as-7.1.1.Final.tar.gz --directory=/opt/jboss/ \
+&& rm -f /tmp/jboss-as-7.1.1.Final.tar.gz
 
 COPY standalone.conf /opt/jboss/jboss-as-7.1.1.Final/bin/standalone.conf
 COPY standalone.xml /opt/jboss/jboss-as-7.1.1.Final/standalone/configuration/standalone.xml
