@@ -6,9 +6,8 @@ apt-get update \
 && export DEBIAN_FRONTEND=noninteractive \
 && ln -fs /usr/share/zoneinfo/America/Sao_Paulo /etc/localtime \
 && apt-get install -y tzdata \
-&& apt-get install -y curl \
-&& curl http://download.jboss.org/jbossas/7.1/jboss-as-7.1.1.Final/jboss-as-7.1.1.Final.tar.gz --output /tmp/jboss.tar.gz \
-&& apt-get -y auto-remove curl \
+&& apt-get install -y wget \
+&& wget http://download.jboss.org/jbossas/7.1/jboss-as-7.1.1.Final/jboss-as-7.1.1.Final.tar.gz -P /tmp/jboss.tar.gz \
 && mkdir /opt/jboss \
 && tar -xf /tmp/jboss.tar.gz --directory=/opt/jboss/ \
 && rm -f /tmp/jboss.tar.gz
