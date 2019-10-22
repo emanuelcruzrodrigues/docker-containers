@@ -7,7 +7,7 @@ apt-get update \
 && ln -fs /usr/share/zoneinfo/America/Sao_Paulo /etc/localtime \
 && apt-get install -y tzdata \
 && apt-get install -y wget \
-&& wget http://download.jboss.org/jbossas/7.1/jboss-as-7.1.1.Final/jboss-as-7.1.1.Final.tar.gz -P /tmp/jboss.tar.gz \
+&& wget http://download.jboss.org/jbossas/7.1/jboss-as-7.1.1.Final/jboss-as-7.1.1.Final.tar.gz -P /tmp \
 && mkdir /opt/jboss \
 && tar -xf /tmp/jboss.tar.gz --directory=/opt/jboss/ \
 && rm -f /tmp/jboss.tar.gz
