@@ -1,0 +1,10 @@
+docker run -it --rm --name=Antara-Server-ZENDA \
+-p 8080:8080 \
+-p 8787:8787 \
+-v $(pwd)/antara:/opt/jboss/deployments \
+-e DS_NAME=AntaraDS \
+-e DB_CONNECTION_URL=jdbc:jtds:sqlserver://10.1.1.3:1433/54-ZENDA \
+-e DB_USERNAME=sa \
+-e DB_PASSWORD=SQL19sys20h \
+-e TZ=America/Sao_Paulo \
+emanuelrodrigues/antara-server-5.4

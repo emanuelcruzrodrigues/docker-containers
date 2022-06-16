@@ -1,0 +1,2 @@
+docker build -t emanuelrodrigues/antara-server-5.4 .
+
